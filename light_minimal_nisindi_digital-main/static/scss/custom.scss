@@ -1,0 +1,70 @@
+// import bootstrap scss so we can compile it into our custom css //
+@import "../3rdparty/bootstrap-4.6.2/scss/bootstrap";
+// end import bootstrap scss so we can compile it into our custom css //
+
+// [class*="col-"] {border: 1px solid red !important;}
+
+// custom colors for use as scss variables
+$color-1: #8d7569;
+$color-2: #D6D6D6;
+$color-3: #f7f1eb;
+$color-4: #FFFFFF;
+// end custom colors for use as scss variables
+
+// custom colors for use in utility classes
+$theme-colors: (
+  "color-1": #8d7569,
+  "color-2": #D6D6D6,
+  "color-3": #f7f1eb,
+  "color-4": #FFFFFF,
+);
+
+.bg-color-1 {background-color:#8d7569;}
+.bg-color-2 {background-color:#D6D6D6;} 
+.bg-color-3 {background-color:#f7f1eb;} 
+.bg-color-4 {background-color:#FFFFFF;}
+// end custom colors for use in utility classes
+
+// navbar brand logo font //
+.logo-font {font-family: 'Lora', serif; font-size: 18px; letter-spacing: 4px;}
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {font-weight: 600; font-size: 18px; margin-left: 50px;}
+// end navbar brand logo font //
+
+// general styles //
+body {background:$color-1; color:$color-1; font-family: 'DM Sans', sans-serif; font-weight: 400;}
+h1 {font-size: 64px; font-weight: 500;}
+h2 {font-size: 42px; font-weight: 500;}
+h3 {font-size: 24px; font-weight: 700;}
+p {font-size: 18px; line-height: 150%;}
+// end general styles //
+
+// footer //
+.footer-banner-wrapper{height:550px; background: $color-1 url("../images/footer_banner.jpg") no-repeat left top; background-size: cover;}
+// end footer // 
+
+// contact form styles //
+.get-in-touch-form-wrapper input, .get-in-touch-form-wrapper textarea {border-radius: 0px; border: 0px; background:transparent; border: 1px solid #656565; color:#fff; padding:30px 20px;}
+.get-in-touch-form-wrapper input:focus, .get-in-touch-form-wrapper textarea:focus {border-radius: 0px; border: 0px; background:transparent; border: 1px solid $color-1; color:$color-1;}
+.get-in-touch-form-wrapper input::placeholder, .get-in-touch-form-wrapper textarea::placeholder {color:#989898;}
+// end contact form styles //
+
+/* custom utility classed */
+.bw-2 {border-width: 2px;}
+.bw-3 {border-width: 3px;}
+.fw-400 {font-weight: 400;}
+.fw-500 {font-weight: 500;}
+.fw-700 {font-weight: 500;}
+.pt-140 {padding-top: 40px;}
+.pt-60 {padding-top: 60px;}
+.custom-pb-140 {padding-bottom: 40px;}
+.mobile-btn {display: block; width: 100%;}
+.small {margin-top: 30px;}
+/* end custom utility classed */
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+.pt-140 {padding-top: 140px;}
+.pb-140 {padding-bottom: 140px;}
+.mobile-btn {display: inline-block;}
+.small {margin-top: 0px;}
+}
